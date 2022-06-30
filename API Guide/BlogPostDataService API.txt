@@ -1,0 +1,57 @@
+BlogPostDataService API
+
+-Get All Posts   => http://localhost:8000/api/post/posts/
+-Create a Post
+    http://localhost:8000/api/post/posts/
+    Body =>  {
+        
+        "title": "New Test",
+        "description": "New TEST",
+        "like_by": []
+        
+        
+    }
+
+
+-Post Detail   =>  http://localhost:8000/api/post/posts/11/
+
+-Get ALl comments on a Post
+    http://localhost:8000/api/post/posts/9/comments
+-Post a comment on a specific post
+    Body = > 
+        {
+      
+        "comment_text": "New Posts",
+        "user": 45
+       
+    }
+    -User is based on loggin user => for test purpose on API add user id
+    
+-Like a Post => http://localhost:8000/api/post/posts/9/like_post/
+        Body => {
+      
+        
+        "user": 49
+       
+    }
+    which user liked the post, base on login user on frontend
+
+-Get all replies on a comment based on specific post => http://localhost:8000/api/post/posts/9/comments/43/reply/
+
+-Reply to a comment based on specific post
+http://localhost:8000/api/post/posts/9/comments/43/reply/
+method(POST)
+Body => {
+      
+        "reply_text": "Nice",
+        "user": 45,
+        "comment":43
+       
+    }
+
+L
+
+
+
+
+
